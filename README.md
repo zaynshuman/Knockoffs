@@ -1,6 +1,6 @@
 # Knockoffs
 
-Barber and Candes [[1]](#1) introduced the Knockoff filter  as a variable selection procedure controlling the FDR in a statistical linear model. This project aims to identify US equities thats are the most significant predictors of US Index returns using the Knockoff filter. These US equities will then be used to construct a balanced portfolio. 
+Barber and Candes [[1]](#1) introduced the Knockoff filter  as a variable selection procedure controlling the FDR in a statistical linear model. This project aims to identify US equities thats are the most significant predictors of US Index returns using the Knockoff filter. These US equities will then be used to construct a portfolio that tracks a chosen index. 
 
 ## References
 <a id="1">[1]</a> 
