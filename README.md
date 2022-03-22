@@ -4,6 +4,10 @@ Barber and Candes introduced the Knockoff filter [[1]](#1)
 
 ## References
 <a id="1">[1]</a> 
-Dijkstra, E. W. (1968). 
-Go to statement considered harmful. 
-Communications of the ACM, 11(3), 147-148.
+Rina Foygel Barber and Emmanuel J. Candes. 
+“Controlling the false discovery rate via knock-
+offs”. 
+In: The Annals of Statistics 43.5 (Oct. 2015). 
+issn: 0090-5364. 
+doi: 10.1214/15-aos1337. 
+url: http://dx.doi.org/10.1214/15-AOS1337.
