@@ -41,6 +41,7 @@ rej/(n/2)
 # FDR <= m0/m * q
 
 # Plot the p values in ascending order from pval.half
+
 plot(1:3000, head(sort(pval.half),-7000), type = 'l',xlab = 'p-value Rank', ylab = 'p-Value')
 # We reject when p value < (rank/n) * desired FDR
 # We reject all p values below the red line
