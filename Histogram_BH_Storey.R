@@ -46,7 +46,6 @@ plot(1:3000, head(sort(pval.half),-7000), type = 'l',xlab = 'p-value Rank', ylab
 # We reject all p values below the red line
 lines(1:3000, (1:3000)*0.05/n, col='red')
 
-
 ### Storey's Method
 
 # In a real test, we will never know if p-values come from a test that is true or false
