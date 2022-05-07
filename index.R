@@ -54,16 +54,18 @@ date_near = function(dates, target, thresh = Inf, onlypre = F,
   return(date)
 }
 
-Russ = read_excel("H:\\Russel100.xlsx")
+Russ = read_excel("H:\\Dataset\\Russel100.xlsx")
 
 Russ$datadate <- lubridate::ymd(Russ$datadate)
 Russ <- dplyr::arrange(Russ, datadate)
 
 monday_iter = as.Date(Russ$datadate[7839])
-monday_vec = c(1:629)
+
+monday_vec = c(1:630)
+monday_vec[1] = monday_iter
 for (i in 1:629){
   monday_iter = monday_iter + 7
-  monday_vec[i] = monday_iter
+  monday_vec[i+1] = monday_iter
 }
 
 monday_vec <- as.Date(monday_vec, origin = "1970-01-01")
@@ -77,8 +79,8 @@ day
 monday_vec %in% Russ$datadate
 
 
-updated_dates = c(1:629)
-for (i in 1:629){
+updated_dates = c(1:630)
+for (i in 1:630){
   updated_dates[i] <- date_near(Russ$datadate,monday_vec[i],sidepref='l')
 }
 
@@ -91,12 +93,12 @@ day_updated
 
 updated_dates %in% monday_vec == monday_vec %in% Russ$datadate
 
-price_hist = c(1:629)
-for (i in 1:629){
+price_hist = c(1:630)
+for (i in 1:630){
   price_hist[i] <- Russ$RussPrice[Russ$datadate==updated_dates[i]]
 }
-return_series = c(1:629)
-for (i in 1:628){
+return_series = c(1:630)
+for (i in 1:629){
   return_series[i+1] <- (price_hist[(i+1)]/price_hist[i])-1
 }
 
@@ -106,4 +108,11 @@ return_series
 plot(1:628,return_series,type = 'l')
 
 
+
+# Return series 1 corresponds to returns on 15 Jan and ends on 24 Dec 2020
+
+return_series_resp <- return_series[1:572]
+length(return_series_resp)
+
+return_series_resp
 
