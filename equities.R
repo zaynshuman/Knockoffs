@@ -79,7 +79,7 @@ friday_vec <- as.Date(friday_vec, origin = "1970-01-01")
 friday_vec <- as.Date(friday_vec, format = "%Y/%m/%d")
 friday_vec
 
-
+length(friday_vec)
 
 mat <- matrix(list(), nrow = length(friday_vec), ncol = 100)
 
@@ -99,3 +99,12 @@ for (j in perma$permno){
 }
 
 
+return_series_mat = matrix(list(), nrow = length(friday_vec), ncol = 100)
+for (j in 1:length(perma$permno)){
+  for (i in 1:(length(friday_vec)-1)){
+    return_series_mat[i+1,j] = ( as.numeric(mat[i+1,j]) / as.numeric(mat[i,j]) ) - 1 
+  }
+}
+
+return_series_mat <- return_series_mat[-1,]
+return_series_mat
