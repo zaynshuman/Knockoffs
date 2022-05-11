@@ -18,8 +18,8 @@ typeof(return_series_resp)
 
 
 # Find equities associated with knockoffs 
-
-selected = c(1,3,4,12,14,21,24,26,30,33,34,35,42,47,53,57,58,60,62,63,67,69,71,73,74,76,94,95,97,100)
+# Update selected rows with the variables found via knockoffs, the code below identifies corresponding tickers 
+selected = c()
 tic = c(1:30)
 counter = 1
 for (i in selected){
