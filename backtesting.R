@@ -19,7 +19,7 @@ for (k in 1:52){
 }
 
 plot(1:52, prc_2020, type = 'l', xlab = 'Weeks in 2020', ylab = 'Tracking Portfolio Price')
-plot(1:52, backtest_price, type = 'l',xlab = 'Weeks in 2020', ylab =  'DIJA Price' )
+plot(1:52, backtest_price, type = 'l',xlab = 'Weeks in 2020', ylab =  'Price' )
 
 
 
