@@ -1,9 +1,12 @@
-#index
+# Price history of our index in 2020
 
 backtest_price <- price_hist[522:573]
  
-#mat is our matrix of asset prices
-#equity
+# mat is our matrix of asset prices
+# Price history of equities in 2020
+
+# For each of the knockoff PERMNOs and for each Friday in 2020, we multiply weights by the price of their corresponding assets and sum this value to arrive at the portfolio price
+
 mat_2020 <- mat[522:573,]
 prc_2020 = c(1:52)
 
